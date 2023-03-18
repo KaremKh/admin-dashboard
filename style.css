@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'MyFont';
-    src: url(fonts/verdana-font-family/verdana.ttf) format('truetype');
+    src: url(fonts/chirp-regular-web.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MyFont';
-    src: url(fonts/verdana-font-family/verdana-bold.ttf) format('truetype');
+    src: url(fonts/chirp-bold-web.woff) format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -48,15 +48,129 @@ html, body {
 }
 
 .header {
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     grid-column: 2/3;
 
+
 }
 
+.search {
+    background-color: rgb(255, 255, 255);
+    padding: 18px 10px 18px 90px;
+    position: relative;
+}
+
+.search img {
+    max-width: 20px;
+    position: absolute;
+    left: 60px;
+    top: 20px;
+}
+
+.search input {
+    appearance: none;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    width: 65%;
+    height: 25px;
+}
+
+.profile {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.profile #pp {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+}
+
+.profile #message{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    padding-right: 25px;
+}
+
+.buttons button {
+    height: 30px;
+    width: 80px;
+    background-color: rgb(195, 82, 38);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+.settings {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 40px 20px 30px;
+
+}
+
+.settings img {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+}
+
+
+
 .sidebar {
-    background-color: blueviolet;
+    background-color: rgb(195, 82, 38);
     grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+.sidebar .dash h2,
+.sidebar .tabs li,
+.sidebar .sett li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-top: 8px;
+}
+.sidebar .dash h2 {
+    padding-left: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.dash img {
+    width: 45px;
+    height: 45px;
+    margin-right: 12px;
+}
+
+.tabs img, .sett img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .content {
@@ -69,6 +183,7 @@ html, body {
     
 }
 
+
 .projects {
     
     background-color: var(--primary-color);
@@ -79,7 +194,7 @@ html, body {
 
 .content h2 {
     margin-bottom:10px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .project-content {
@@ -133,11 +248,11 @@ button:hover{
 .conn-info h4 {
     margin: 0;
     margin-right: 5px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .conn-info p {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text-color);
 }
 
@@ -159,11 +274,11 @@ button:hover{
   }
 .card h3 {
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
   .card p {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text-color);
   }
 .card img {
@@ -195,11 +310,11 @@ button:hover{
 
 .announcement-content h4 {
     margin-bottom: 8px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
   .announcement-content p {
-    font-size: 9px;
+    font-size: 10px;
     color: var(--text-color);
   }
 
